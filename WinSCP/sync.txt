@@ -1,0 +1,20 @@
+option batch abort
+option confirm off
+# Connect
+open sftp://root:password@192.168.7.2 -hostkey="ssh-rsa 2048 a7:57:9f:51:ba:55:22:98:26:22:54:ff:8b:19:51:75"
+#mkdir /root/temp
+#set REMOTE_PATH=/home/user/test.txt
+#winscp.com /command ^
+#  "open mysession" ^
+#   "stat %REMOTE_PATH%" ^
+#    "exit"
+#if %ERRORLEVEL% neq 0 goto error
+#:error
+#mkdir /root/temp
+#synchronize 
+synchronize remote C:\temp\source /root/temp
+# Disconnect
+close
+# Exit WinSCP
+#exit
+

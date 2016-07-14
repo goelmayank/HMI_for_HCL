@@ -1,0 +1,11 @@
+option batch abort
+option confirm off
+# Connect
+open sftp://root:password@192.168.7.2 -hostkey="ssh-rsa 2048 14:30:92:06:6c:26:ae:7f:ab:4e:0e:f9:92:04:c4:8c"
+#synchronize 
+synchronize both C:\temp\target /root/temp
+# Disconnect
+close
+# Exit WinSCP
+exit
+
